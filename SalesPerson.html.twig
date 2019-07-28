@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Offers in Progress</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{#  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">#}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+<body>
+    
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/CRM/public/index.php/get_offers">CRM Home Page</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <form action="/CRM/public/index.php/logout" method="POST">
+        <li><a href="/CRM/public/index.php/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </form>
+    </ul>
+  </div>
+</nav>
+
+
+
+    <h1>Offers in Progress (sales)</h1>
+  <form action="/CRM/public/index.php/update_offer_sales" method="POST">
+    Avalability:<br>
+    <input type="text" name="avalability" >
+    <br><br>
+    Comments:<br>
+    <input type="text" name="comments">
+    <br><br>
+    <input type="hidden" name="update_offerId" value="{{ offerId }}">
+    <input type="submit" value="Update Offer">
+</form> 
+</body>
+</html>
+
+
